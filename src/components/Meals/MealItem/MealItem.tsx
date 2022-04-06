@@ -1,6 +1,8 @@
+import MealItemForm from "./MealItemForm";
 import { MealItemLi, MealItemDescription, MealItemPrice } from "./MealItem.styles";
 
 interface MealItemProps {
+  id: string;
   name: string;
   description: string;
   price: number;
@@ -17,7 +19,7 @@ const MealItem = (props: MealItemProps) => {
         <MealItemPrice>{price}</MealItemPrice>
       </div>
       <div>
-
+        <MealItemForm id={props.id} />
       </div>
     </MealItemLi>
   );
