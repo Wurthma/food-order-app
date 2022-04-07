@@ -1,3 +1,4 @@
+import Modal from "../UI/Modal";
 import { 
   CartItems, 
   DivTotal,
@@ -15,7 +16,7 @@ const Cart = (props: CartProps) => {
   )}</CartItems>;
 
   return (
-    <div>
+    <Modal>
       {cartItems}
       <DivTotal>
         <span>Total Amount</span>
@@ -25,7 +26,7 @@ const Cart = (props: CartProps) => {
         <button style={{ color: '#8a2b06' }}>Close</button>
         <button style={{ backgroundColor: '#8a2b06', color: 'white' }}>Order</button>
       </DivActions>
-    </div>
+    </Modal>
   );
 };
 
