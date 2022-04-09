@@ -3,6 +3,7 @@ import { StyledHeader, MainImage, Image } from './Header.styles';
 import HeaderCartButton from './HeaderCartButton';
 
 interface HeaderProps {
+  onShowCart: () => void;
 }
 
 const Header = (props: HeaderProps) => {
@@ -10,7 +11,7 @@ const Header = (props: HeaderProps) => {
         <>
         <StyledHeader>
             <h1>ReactMeals</h1>
-            <HeaderCartButton />
+            <HeaderCartButton onClick={props.onShowCart} />
         </StyledHeader>
         <MainImage>
             <Image src={mealsImage} alt="A table full of delicious food!" />

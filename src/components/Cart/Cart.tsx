@@ -6,7 +6,7 @@ import {
 } from "./Cart.styles";
 
 interface CartProps {
-
+  onClose: () => void;
 }
 
 const Cart = (props: CartProps) => {
@@ -16,14 +16,14 @@ const Cart = (props: CartProps) => {
   )}</CartItems>;
 
   return (
-    <Modal>
+    <Modal onClose={props.onClose}>
       {cartItems}
       <DivTotal>
         <span>Total Amount</span>
         <span>35.62</span>
       </DivTotal>
       <DivActions>
-        <button style={{ color: '#8a2b06' }}>Close</button>
+        <button onClick={props.onClose} style={{ color: '#8a2b06' }}>Close</button>
         <button style={{ backgroundColor: '#8a2b06', color: 'white' }}>Order</button>
       </DivActions>
     </Modal>
