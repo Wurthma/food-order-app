@@ -1,10 +1,10 @@
 import React from 'react';
-import { IItems } from '../shared/interfaces/IItems';
+import { IItem } from '../shared/interfaces/IItem';
 
 const CartContext = React.createContext({
-    items:  new Array<IItems>(),
+    items:  new Array<IItem>(),
     totalAmount: 0,
-    addItem: (item: string) => {},
+    addItem: (item: IItem) => {},
     removeItem: (id: number) => {}
 });
 
