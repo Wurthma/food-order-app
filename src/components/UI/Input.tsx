@@ -1,3 +1,4 @@
+import React from "react";
 import { StyledInput } from "./Input.styles"
 
 export interface InputConfig {
@@ -13,13 +14,13 @@ interface InputProps {
   input: InputConfig;
 }
 
-const Input = (props: InputProps) => {
+const Input = React.forwardRef((props: InputProps, ref: React.ForwardedRef<HTMLInputElement>) => {
   return (
     <StyledInput>
       <label htmlFor={props.input.id}>{props.label}</label>
-      <input {...props.input} />
+      <input ref={ref} {...props.input} />
     </StyledInput>
   );
-}
+});
 
 export default Input;
