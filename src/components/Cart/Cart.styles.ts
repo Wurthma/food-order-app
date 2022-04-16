@@ -5,7 +5,7 @@ export const CartItems = styled.ul`
   margin: 0;
   padding: 0;
   max-height: 20rem;
-  overflow: auto;
+  overflow: scroll;
 `;
 
 export const DivTotal = styled.div`
