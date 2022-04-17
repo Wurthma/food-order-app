@@ -1,4 +1,3 @@
-import { IItem } from '../../../shared/interfaces/IItem';
 import { 
     CartItemLi,
     Summary,
@@ -11,8 +10,8 @@ interface CartItemProps {
     name: string;
     price: number;
     amount: number;
-    onRemove: (id: string) => void;
-    onAdd: (item: IItem) => void;
+    onRemove: () => void;
+    onAdd: () => void;
 }
 
 const CartItem = (props: CartItemProps) => {
@@ -28,8 +27,8 @@ const CartItem = (props: CartItemProps) => {
         </Summary>
       </div>
       <Actions>
-        {/* <button onClick={props.onRemove}>−</button> */}
-        {/* <button onClick={props.onAdd}>+</button> */}
+        <button onClick={props.onRemove}>−</button>
+        <button onClick={props.onAdd}>+</button>
       </Actions>
     </CartItemLi>
   );
