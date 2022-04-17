@@ -1,7 +1,7 @@
 import { IItem } from "./IItem";
 
 export interface ICartContextAction {
-    id: number;
+    id: string;
     type: string;
-    item?: IItem | undefined;
+    item: IItem;
 }
