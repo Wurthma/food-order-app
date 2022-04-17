@@ -1,5 +1,23 @@
 import styled, { keyframes } from 'styled-components';
 
+const KeyframesBump = keyframes`
+    0% {
+        transform: scale(1);
+    }
+    10% {
+        transform: scale(0.9);
+    }
+    30% {
+        transform: scale(1.1);
+    }
+    50% {
+        transform: scale(1.15);
+    }
+    100% {
+        transform: scale(1);
+    }
+`;
+
 export const CartBadge = styled.span`
     background-color: #b94517;
     padding: 0.25rem 1rem;
@@ -30,32 +48,12 @@ export const CartButton = styled.button`
     &:active ${CartBadge}{
         background-color: #92320c;
     }
+
+    animation: ${KeyframesBump} 300ms ease-out;
 `;
 
 export const CartIcon = styled.span`
     width: 1.35rem;
     height: 1.35rem;
     margin-right: 0.5rem;
-`;
-
-const KeyframesBump = keyframes`
-    0% {
-        transform: scale(1);
-    }
-    10% {
-        transform: scale(0.9);
-    }
-    30% {
-        transform: scale(1.1);
-    }
-    50% {
-        transform: scale(1.15);
-    }
-    100% {
-        transform: scale(1);
-    }
-`;
-
-export const Bump = styled.span`
-  animation: ${KeyframesBump} 300ms ease-out;
 `;
